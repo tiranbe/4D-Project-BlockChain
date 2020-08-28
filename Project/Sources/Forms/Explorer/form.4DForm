@@ -1,0 +1,208 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"List Box": {
+					"type": "listbox",
+					"left": 14,
+					"top": 108,
+					"width": 913,
+					"height": 311,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.chain",
+					"stroke": "automatic",
+					"alternateFill": "#FAFAFA",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "ID",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"dataSource": "This:C1470.ID",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 218
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Data"
+							},
+							"name": "Column2",
+							"dataSource": "This:C1470.data",
+							"footer": {
+								"name": "Footer2"
+							}
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Nonce"
+							},
+							"name": "Column3",
+							"dataSource": "This:C1470.nonce",
+							"footer": {
+								"name": "Footer3"
+							}
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Hash"
+							},
+							"name": "Column4",
+							"dataSource": "This:C1470.hash",
+							"footer": {
+								"name": "Footer4"
+							}
+						},
+						{
+							"header": {
+								"name": "Header5",
+								"text": "Previous hash"
+							},
+							"name": "Column5",
+							"dataSource": "This:C1470.previousHash",
+							"footer": {
+								"name": "Footer5"
+							}
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Block is Valid?"
+							},
+							"name": "Column6",
+							"dataSource": "isValidEmoji(This:C1470)",
+							"dataSourceTypeHint": "boolean",
+							"footer": {
+								"name": "Footer6"
+							}
+						},
+						{
+							"header": {
+								"name": "Header7",
+								"text": "TimeStamp"
+							},
+							"name": "Column7",
+							"dataSource": "This:C1470.timeStamp.toString()",
+							"footer": {
+								"name": "Footer7"
+							}
+						}
+					]
+				},
+				"Button": {
+					"type": "button",
+					"text": "Initialize BlockChain",
+					"top": 71,
+					"left": 14,
+					"width": 166,
+					"height": 31,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"Input": {
+					"type": "input",
+					"left": 188,
+					"top": 71,
+					"width": 394,
+					"height": 30,
+					"dataSource": "Form:C1466.data",
+					"fontSize": 24
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Add Data to BlockChain",
+					"top": 70,
+					"left": 588,
+					"width": 206,
+					"height": 31,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 875,
+					"top": 69,
+					"width": 50,
+					"height": 33,
+					"dataSource": "isValidEmoji(blockChain)",
+					"enterable": false,
+					"contextMenu": "none",
+					"focusable": false,
+					"fontSize": 24,
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"Text": {
+					"type": "text",
+					"text": "The 4D BlockChain Explorer\r",
+					"top": 8,
+					"left": 15,
+					"width": 586,
+					"height": 29,
+					"fontSize": 24,
+					"fontWeight": "bold"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "A Simple BlockChain in 4D",
+					"top": 41,
+					"left": 18,
+					"width": 237,
+					"height": 16
+				}
+			}
+		}
+	],
+	"geometryStamp": 61
+}
